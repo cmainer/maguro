@@ -28,8 +28,8 @@ module Maguro
       add_ruby_version
       commit 'add gems'
 
-      remove_turbo_links
-      commit 'remove turbolinks'
+      # remove_turbo_links
+      # commit 'remove turbolinks'
 
       create_database_files
       commit 'add database.sample.yml and database.yml files'
@@ -111,14 +111,14 @@ module Maguro
       builder.gem 'rails_12factor', group: :production
     end
 
-    def remove_turbo_links
-      # remove turbolinks
-      builder.gsub_file "Gemfile", /gem 'turbolinks'[\r\n]/, ""
+    # def remove_turbo_links
+    #   # remove turbolinks
+    #   builder.gsub_file "Gemfile", /gem 'turbolinks'[\r\n]/, ""
 
-      # remove other code related to turbolinks
-      builder.gsub_file "app/views/layouts/application.html.erb", /, ('|")data-turbolinks-track('|") => true/, ""
-      builder.gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks[\r\n]/, ""
-    end
+    #   # remove other code related to turbolinks
+    #   builder.gsub_file "app/views/layouts/application.html.erb", /, ('|")data-turbolinks-track('|") => true/, ""
+    #   builder.gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks[\r\n]/, ""
+    # end
 
     def add_test_gems
       builder.gem_group :development, :test do
