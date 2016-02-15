@@ -15,7 +15,6 @@ Maguro will create a basic Rails project that is optimized for Bottega8's workfl
 1. Creating a basic README.md
 1. Setting up local git repository, gitinit file, and development branch
 1. Generating app_environment_variables.rb for custom environment variables
-1. Removing Turbolinks
 1. Including RSpec, capybara, database_cleaner, factory_girl, and other gems for testing
 1. Using PostgreSQL as the database and generating database.yml
 
